@@ -17,7 +17,7 @@ describe ExchangeService do
   end
 
   before do
-    allow(RestClient).to receive(:get) { OpenStruct.new(body: api_return.json) }
+    allow(RestClient).to receive(:get) { OpenStruct.new(body: api_return.to_json) }
   end
 
   it '#call' do
